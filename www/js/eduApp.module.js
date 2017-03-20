@@ -5,6 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('eduApp', [
     'ionic',
+    'eduApp.login'
   ])
   .config(eduAppConfig)
   .run(eduAppRun);
@@ -14,7 +15,7 @@ function eduAppConfig($stateProvider, $urlRouterProvider) {
       .state('home', {
         url: '/home',
         templateUrl: 'js/features/home/home.html'
-      });
+      })
      $urlRouterProvider.otherwise('/home');
 }
 
