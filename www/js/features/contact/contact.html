@@ -1,0 +1,17 @@
+<ion-view view-title="Contact Us" hide-back-button="false">
+	<ion-content>
+		<div class="list">
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Name</span>
+				<input type="text" placeholder="Full Name" ng-model="ContactVM.contactInfo.name">
+			</label>
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Password</span>
+				<input type="password" ng-model="LoginVM.loginInfo.password">
+			</label>
+		</div>
+		<button class="button button-block button-balanced" ng-click="ContactVM.contact()">
+			Send Message
+		</button>
+	</ion-content>
+</ion-view>

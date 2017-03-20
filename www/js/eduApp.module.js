@@ -5,7 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('eduApp', [
     'ionic',
-    'eduApp.login'
+    'eduApp.login',
+    'eduApp.contact'
   ])
   .config(eduAppConfig)
   .run(eduAppRun);
