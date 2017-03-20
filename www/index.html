@@ -30,20 +30,18 @@
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
-    <script src="js/app.js"></script>
+    <script src="js/eduApp.module.js"></script>
+    <script src="js/features/login/login.module.js"></script>
+    <script src="js/features/login/login.controller.js"></script>
+    <script src="js/features/login/login.route.js"></script>
   </head>
-  <body ng-app="App">
-
-    <ion-pane>
-      <ion-header-bar class="bar-stable bar-positive">
-          <button class="button button-icon icon ion-navicon"></button>
-          <h1 class="title">Education Management</h1>
-          <button class="button button-positive">Login</button>
- 
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
+  <body ng-app="eduApp">
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button class="button-clear">
+        <i class="icon ion-ios-arrow-left"></i> Back
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
 
    </body>
 </html>
