@@ -1,6 +1,6 @@
 angular
 	.module('eduApp.contact')
-	.controller('ContactCtrl', ContactCtrl);
+	.controller('ContactCtrl', ['$scope', '$http', ContactCtrl]);
 
 function ContactCtrl($state, $http) {
 	var vm = this;
@@ -15,7 +15,7 @@ function ContactCtrl($state, $http) {
 	console.log("message");
 	console.log(messageToBeSent);
 
-	$http.post('/sendMail', messageToBeSent)
+	$http.post('/api/email', messageToBeSent)
 		.success(function(data) {
 
 		})
