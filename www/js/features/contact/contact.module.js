@@ -1,3 +1,3 @@
 angular
-	.module('eduApp.contact', ['$http'
+	.module('eduApp.contact', [
 	]);

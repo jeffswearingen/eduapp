@@ -1,6 +1,6 @@
 angular
 	.module('eduApp.contact')
-	.controller('ContactCtrl', ['$scope', '$http', ContactCtrl]);
+	.controller('ContactCtrl', ContactCtrl);
 
 function ContactCtrl($state, $http) {
 	var vm = this;
