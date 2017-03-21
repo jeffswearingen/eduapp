@@ -8,9 +8,9 @@ function ContactCtrl($state, $http) {
 	vm.contact = function() {
 	console.log(vm);
 	var messageToBeSent = {
-		name : this.name,
-		email : this.email,
-		messageBody : this.messageBody
+		name : vm.contactInfo.name,
+		email : vm.contactInfo.email,
+		messageBody : vm.contactInfo.messageBody
 	};
 	console.log("message");
 	console.log(messageToBeSent);
