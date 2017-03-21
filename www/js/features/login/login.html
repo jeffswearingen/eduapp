@@ -2,8 +2,8 @@
 	<ion-content>
 		<div class="list">
 			<label class="item item-input item-stacked-label">
-				<span class="input-label">User Name</span>
-				<input type="text" placeholder="userid" ng-model="LoginVM.loginInfo.userId">
+				<span class="input-label">Email Address</span>
+				<input type="text" placeholder="john@gmail.com" ng-model="LoginVM.loginInfo.emailAddress">
 			</label>
 			<label class="item item-input item-stacked-label">
 				<span class="input-label">Password</span>
@@ -12,6 +12,9 @@
 		</div>
 		<button class="button button-block button-balanced" ng-click="LoginVM.login()">
 			Login
+		</button>
+		<button class="button button-block button-balanced" ng-click="LoginVM.register()">
+			Register Account
 		</button>
 	</ion-content>
 </ion-view>

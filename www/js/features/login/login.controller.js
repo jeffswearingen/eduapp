@@ -3,10 +3,28 @@ angular
 	.controller('LoginCtrl', LoginCtrl);
 
 function LoginCtrl() {
-	return {
-		restrict: 'E',
-		templateUrl: 'js/features/login/login.html',
-		controller: 'LoginCtrl',
-		controllerAs: 'LoginVM'
-	}
+
+	var vm = this;
+
+	vm.userInfoCreate = function() {
+		var userInfo = {
+			emailAddress : this.loginInfo.emailAddress,
+			password : this.loginInfo.password
+		};
+		return userInfo;
+	};
+
+	vm.register = function() {
+		console.log('call register function');
+		var registerUserInformation = vm.userInfoCreate();
+		console.log(registerUserInformation);
+	};
+
+	vm.login = function() {
+		console.log('call login function');
+		var loginUserInformation = vm.userInfoCreate();
+		console.log(loginUserInformation);
+	};
+
+	
 }
