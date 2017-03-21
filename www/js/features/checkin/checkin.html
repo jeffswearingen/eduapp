@@ -1,0 +1,24 @@
+<ion-view view-title="Checkin" hide-back-button="false">
+	<ion-content>
+		<div class="list">
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Name</span>
+				<input type="text" placeholder="John Doe" ng-model="CheckinVM.checkinInfo.name">
+			</label>
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Meeting Attended</span>
+				<select ng-model="CheckinVM.checkinInfo.meeting">
+					<option value="">
+					<option value="1"> 8:15 AM Meeting
+					<option value="2"> 9:15 AM Meeting A
+					<option value="3"> 9:15 AM Meeting B
+					<option value="4">11:00 AM Meeting A
+					<option value="5">11:00 AM Meeting B
+				</select>
+			</label>
+		</div>
+		<button class="button button-block button-balanced" ng-click="CheckinVM.checkinUser()">
+			Check In
+		</button>
+	</ion-content>
+</ion-view>

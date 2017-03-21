@@ -8,7 +8,8 @@ angular.module('eduApp', [
     'eduApp.login',
     'eduApp.contact',
     'eduApp.video', 
-    'eduApp.audio'
+    'eduApp.audio',
+    'eduApp.checkin'
   ])
   .config(eduAppConfig)
   .run(eduAppRun);
