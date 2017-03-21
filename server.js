@@ -31,12 +31,12 @@ app.use(bodyParser.json({
 // set default handlebars layout to main
 //app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 //app.set("view engine", "handlebars");
-
+require('./nodemailer.service.js');
 // include routes
-var routes = require('./expressRoutes.js');
+require('./expressRoutes.js')(app);
 
 // use routes
-app.use('/', routes);
+//app.use('/', routes);
 
 // initialize server on port
 app.listen(PORT, function() {

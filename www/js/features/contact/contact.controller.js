@@ -15,7 +15,7 @@ function ContactCtrl($state, $http) {
 	console.log("message");
 	console.log(messageToBeSent);
 
-	$http.post('/api/email', messageToBeSent)
+	$http.post('http://localhost:8000/api/email', messageToBeSent)
 		.success(function(data) {
 
 		})

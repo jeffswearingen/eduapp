@@ -6,7 +6,9 @@
 angular.module('eduApp', [
     'ionic',
     'eduApp.login',
-    'eduApp.contact'
+    'eduApp.contact',
+    'eduApp.video', 
+    'eduApp.audio'
   ])
   .config(eduAppConfig)
   .run(eduAppRun);
