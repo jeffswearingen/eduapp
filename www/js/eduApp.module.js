@@ -10,7 +10,8 @@ angular.module('eduApp', [
     'eduApp.video', 
     'eduApp.audio',
     'eduApp.checkin',
-    'eduApp.register'
+    'eduApp.register',
+    'eduApp.calendar'
   ])
   .config(eduAppConfig)
   .run(eduAppRun);
