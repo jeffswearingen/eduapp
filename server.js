@@ -9,6 +9,9 @@ var bodyParser = require('body-parser');
 var app = express();
 var PORT = process.env.PORT || 8000;
 
+// require database models for syncing
+var db = require("./models");
+
 // serve the static css file from the public directory
 app.use(express.static(process.cwd() + "/public"));
 
@@ -38,7 +41,11 @@ require('./expressRoutes.js')(app);
 // use routes
 //app.use('/', routes);
 
-// initialize server on port
-app.listen(PORT, function() {
-	console.log("Listening on PORT " + PORT);
+// synchronize sequelize models and then start express app
+// use force:true after models have been altered or first running the app on a local machine
+db.sequelize.sync({ force : true }).then(function() {
+	// initialize server on port
+	app.listen(PORT, function() {
+		console.log("Listening on PORT " + PORT);
+	});
 });
