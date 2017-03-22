@@ -11,7 +11,8 @@ angular.module('eduApp', [
     'eduApp.audio',
     'eduApp.checkin',
     'eduApp.register',
-    'eduApp.calendar'
+    'eduApp.calendar',
+    'eduApp.map'
   ])
   .config(eduAppConfig)
   .run(eduAppRun);

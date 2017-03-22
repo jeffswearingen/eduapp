@@ -3,10 +3,5 @@ angular
 	.controller('AudioCtrl', AudioCtrl);
 
 function AudioCtrl() {
-	return {
-		restrict: 'E',
-		templateUrl: 'js/features/audio/audio.html',
-		controller: 'AudioCtrl',
-		controllerAs: 'AudioVM'
-	}
+	var vm = this;
 }
