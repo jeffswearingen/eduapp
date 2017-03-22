@@ -1,5 +1,5 @@
 var nodemailer = require('./nodemailer.service.js');
-
+var db = require('./models');
 
 module.exports = function(app) {
 	app.all('/', function(req, res, next) {
@@ -19,6 +19,12 @@ module.exports = function(app) {
 
 	app.post('/api/register', function(req, res) {
 		console.log(req.body);
+		db.Userlogin.create({
+			email    : req.body.emailAddress,
+			password : req.body.password,
+			name     : req.body.name
+
+		});
 		res.end();
 	});
 

@@ -22,7 +22,9 @@ function RegisterCtrl($state, $http) {
 
 		$http.post('http://localhost:8000/api/register', registerUserInformation)
 			.success(function(data) {
-
+				vm.registerInfo.name = '';
+				vm.registerInfo.emailAddress = '';
+				vm.registerInfo.password = '';
 			})
 
 		$state.go('home');
