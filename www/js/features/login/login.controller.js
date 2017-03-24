@@ -18,6 +18,16 @@ function LoginCtrl($state, $http) {
 		console.log('call login function');
 		var loginUserInformation = vm.userInfoCreate();
 		console.log(loginUserInformation);
+		$http.post('http://localhost:8000/api/login', loginUserInformation)
+			.success(function(data) {
+				console.log(data);
+				vm.loginInfo.name = data.name;
+				vm.loginInfo.emailAddress = '';
+				vm.loginInfo.password = '';
+				$state.go('home');
+			}).error(function() {
+				$state.go('register');
+			})
 	};
 
 	vm.register = function() {

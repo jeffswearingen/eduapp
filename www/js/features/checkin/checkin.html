@@ -6,15 +6,18 @@
 				<input type="text" placeholder="John Doe" ng-model="CheckinVM.checkinInfo.name">
 			</label>
 			<label class="item item-input item-stacked-label">
-				<span class="input-label">Meeting Attended</span>
-				<select ng-model="CheckinVM.checkinInfo.meeting">
-					<option value="">
-					<option value="1"> 8:15 AM Meeting
-					<option value="2"> 9:15 AM Meeting A
-					<option value="3"> 9:15 AM Meeting B
-					<option value="4">11:00 AM Meeting A
-					<option value="5">11:00 AM Meeting B
-				</select>
+				<span class="input-label">Meeting Attended</span><br>
+<!--					<input type="checkbox" value="'8:15 Event'" ng-checked="CheckinVM.checkinInfo.meeting"> 8:15 Event<br>
+					<input type="radio" value="'9:30 Event A'" ng-model="CheckinVM.checkinInfo.meeting"> 9:30 Event A<br>
+					<input type="radio" value="'9:30 Event B'" ng-model="CheckinVM.checkinInfo.meeting"> 9:30 Event B<br>
+					<input type="radio" value="'11:00 Event A'" ng-model="CheckinVM.checkinInfo.meeting"> 11:00 Event A<br>
+					<input type="radio" value="'11:00 Event B'" ng-model="CheckinVM.checkinInfo.meeting"> 11:00 Event B		
+					-->
+					<ion-radio ng-model="CheckinVM.checkinInfo.meeting" ng-value="'8:15 Event'"> 8:15 Event </ion-radio>
+					<ion-radio ng-model="CheckinVM.checkinInfo.meeting" ng-value="'9:30 Event A'"> 9:30 Event A</ion-radio>
+					<ion-radio ng-model="CheckinVM.checkinInfo.meeting" ng-value="'9:30 Event B'"> 9:30 Event B</ion-radio>
+					<ion-radio ng-model="CheckinVM.checkinInfo.meeting" ng-value="'11:00 Event A'"> 11:00 Event A</ion-radio>
+					<ion-radio ng-model="CheckinVM.checkinInfo.meeting" ng-value="'11:00 Event B'"> 11:00 Event B</ion-radio>
 			</label>
 		</div>
 		<button class="button button-block button-balanced" ng-click="CheckinVM.checkinUser()">

@@ -28,4 +28,31 @@ module.exports = function(app) {
 		res.end();
 	});
 
+	app.post('/api/login', function(req, res) {
+		console.log(req.body);
+		db.Userlogin.findOne({
+			where: {
+				email    : req.body.emailAddress,
+				password : req.body.password
+			}
+		}).then(function(data) {
+			res.json(data);
+			console.log('response ' + data);
+		}).catch(function(err) {
+			console.log(err);
+		})
+
+	});
+
+	app.post('/api/checkin', function(req, res) {
+		console.log(req.body);
+		db.Attendance.create({
+			name	: req.body.name,
+			event	: req.body.meeting,
+			date	: req.body.date
+		});
+		res.end();
+	});
+
+
 };

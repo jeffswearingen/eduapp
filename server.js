@@ -43,7 +43,7 @@ require('./expressRoutes.js')(app);
 
 // synchronize sequelize models and then start express app
 // use force:true after models have been altered or first running the app on a local machine
-db.sequelize.sync({ force : false }).then(function() {
+db.sequelize.sync({ force : true }).then(function() {
 	// initialize server on port
 	app.listen(PORT, function() {
 		console.log("Listening on PORT " + PORT);

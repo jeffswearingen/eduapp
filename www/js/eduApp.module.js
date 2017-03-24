@@ -5,6 +5,11 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('eduApp', [
     'ionic',
+
+    'ui.bootstrap',
+//    'interactjs',
+//    'ngTouch',
+    'mwl.calendar',
     'eduApp.login',
     'eduApp.contact',
     'eduApp.video', 
