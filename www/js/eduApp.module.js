@@ -5,6 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('eduApp', [
     'ionic',
+    'ngCordova',
 
     'ui.bootstrap',
 //    'interactjs',
@@ -31,7 +32,7 @@ function eduAppConfig($stateProvider, $urlRouterProvider) {
      $urlRouterProvider.otherwise('/home');
 }
 
-function eduAppRun($ionicPlatform) {
+function eduAppRun($ionicPlatform, $cordovaGeolocation, $http, $state) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -46,5 +47,20 @@ function eduAppRun($ionicPlatform) {
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+    $cordovaGeolocation.getCurrentPosition().then(function (data) {
+      $https.get('https://maps.googleapis.com/maps/api/geocode/json',
+        {params: {latlng: data.coords.latitude + ',' + data.coords.longitude}})
+        .success(function (response) {
+          var location = {
+            lat: data.coords.latitude,
+            lng: data.coords.longitude,
+            city: response.results[0].formatted_address,
+            current: true
+          };
+          //Locations.data.unshift(location);
+          console.log(location);
+        });
+    });
   });
 }
