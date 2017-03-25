@@ -29,7 +29,7 @@ function eduAppConfig($stateProvider, $urlRouterProvider) {
         url: '/home',
         templateUrl: 'js/features/home/home.html'
       })
-     $urlRouterProvider.otherwise('/home');
+     $urlRouterProvider.otherwise('/login');
 }
 
 function eduAppRun($ionicPlatform, $cordovaGeolocation, $http, $state) {
@@ -49,7 +49,7 @@ function eduAppRun($ionicPlatform, $cordovaGeolocation, $http, $state) {
     }
 
     $cordovaGeolocation.getCurrentPosition().then(function (data) {
-      $https.get('https://maps.googleapis.com/maps/api/geocode/json',
+      $http.get('https://maps.googleapis.com/maps/api/geocode/json',
         {params: {latlng: data.coords.latitude + ',' + data.coords.longitude}})
         .success(function (response) {
           var location = {
