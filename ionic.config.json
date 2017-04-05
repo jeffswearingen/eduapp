@@ -1,6 +1,6 @@
 {
   "name": "eduapp",
-  "app_id": "",
+  "app_id": "8822e8cb",
   "gulpStartupTasks": [
     "sass",
     "watch"

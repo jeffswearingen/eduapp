@@ -4,12 +4,52 @@ angular
 
 function MapCtrl($http, $scope, $cordovaGeolocation, $ionicLoading, $ionicPlatform) {
 
-	var vm = this;
-    vm.element = document.getElementById(geolocation);
-    console.log(element);
-    
-    
-    
+//    $ionicPlatform.ready(function() {
+//        if(window.cordova && window.cordova.plugins.Keyboard) {
+//        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+//        // for form inputs)
+//        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+//                         
+//        // Don't remove this line unless you know what you are doing. It stops the viewport
+//        // from snapping when text inputs are focused. Ionic handles this internally for
+//        // a much nicer keyboard experience.
+//        cordova.plugins.Keyboard.disableScroll(true);
+//        }
+//        if(window.StatusBar) {
+//                         StatusBar.styleDefault();
+//        }
+//                         
+//        $cordovaGeolocation.getCurrentPosition().then(function (data) {
+//        $http.get('https://maps.googleapis.com/maps/api/geocode/json',
+//        {params: {latlng: data.coords.latitude + ',' + data.coords.longitude}})
+//        .success(function (response) {
+//            var location = {
+//                lat: data.coords.latitude,
+//                 lng: data.coords.longitude,
+//                city: response.results[0].formatted_address,
+//                current: true
+//        };
+//                 console.log(location);
+//                 });
+//    });
+        
+//	var vm = this;
+////    vm.element = document.getElementById(geolocation);
+////    console.log(element);
+//    
+//    var posOptions = {timeout: 10000, enableHighAccuracy: false};
+//    $cordovaGeolocation
+//    .getCurrentPosition(posOptions)
+//    .then(function (position) {
+//          var lat  = position.coords.latitude
+//          var long = position.coords.longitude
+//          }, function(err) {
+//          // error
+//          });
+//    console.log(lat);
+//    console.log(long);
+//
+//    
 //    $cordovaGeolocation.getCurrentPosition().then(function (data) {
 //        $http.get('https://maps.googleapis.com/maps/api/geocode/json',
 //        {params: {latlng: data.coords.latitude + ',' + data.coords.longitude}})

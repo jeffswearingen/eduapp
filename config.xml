@@ -9,7 +9,14 @@
     </author>
   <content src="index.html"/>
   <access origin="*"/>
-  <allow-navigation href="*" />
+  <access origin="http://maps.google.com"/>
+  <access origin="http://maps.googleapis.com"/>
+  <allow-navigation href="*"/>
+  <allow-navigation href="http://192.168.0.57:8100"/>
+  <allow-intent href="tel:*"/>
+  <allow-intent href="geo:*"/>
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -73,5 +80,4 @@
     <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
     <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
-  <allow-navigation href="http://192.168.0.57:8100"/>
 </widget>
