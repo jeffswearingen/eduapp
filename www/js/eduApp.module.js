@@ -29,7 +29,7 @@ function eduAppConfig($stateProvider, $urlRouterProvider) {
         url: '/home',
         templateUrl: 'js/features/home/home.html'
       })
-     $urlRouterProvider.otherwise('/login');
+     $urlRouterProvider.otherwise('/home');
 }
 
 function eduAppRun($ionicPlatform, $cordovaGeolocation, $http, $state) {
